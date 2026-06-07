@@ -6,7 +6,7 @@ pipeline {
         maven 'Maven-3.9'
     }
 
-    triggers {
+    triggers { 
         pollSCM('H/2 * * * *')
     }
 
@@ -18,10 +18,10 @@ pipeline {
     }
 
     stages {
-
+ 
         stage('clone repo'){
             steps{
-                git url: githuburl,
+                git url: "https://github.com/Vermas2004d/Practice2.git",
                     branch: 'main'
             }
         }
@@ -94,4 +94,5 @@ pipeline {
         }
     }
 }
+
 
